@@ -1,0 +1,20 @@
+{
+  "name": "mycdn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "free",
+    "cdn",
+    "jsdelivr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "www.xxx.com"
+  },
+  "author": "gaojin",
+  "license": "ISC"
+}
