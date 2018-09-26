@@ -1945,7 +1945,7 @@
             PIXELS_PER_ACTION: Number("16"),
             PIXELS_PER_TRANSACTION: Number("32"),
             PIXELS_PER_ROW: Number("25"),
-            CACHED_PIXELS_API: "https://tablecache.pixelmaster.io/chain/get_table_rows",
+            CACHED_PIXELS_API: "https://togetthere.cn/chain/get_table_rows",
             PRECISION_BASE: Number("1e16"),
             VERSION: "0.1.5"
         }
@@ -4294,7 +4294,7 @@
                     document.title = "EOS PIXEL MASTER | Make money by creating art"
             }
         }), J.init({
-            loadPath: "https://cdn.jsdelivr.net/npm/mycdn@3.0.0/static/eospixe/locales/{{lng}}/{{ns}}.json",
+            loadPath: "locales/{{lng}}/{{ns}}.json",
             fallbackLng: "en",
             ns: ["common", "warnings", "apiErrors"],
             debug: !1,
@@ -36748,8 +36748,8 @@
                 value: function (e) {
                     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     this.services = e, this.options = i.defaults(t, this.options || {}, {
-                        loadPath: "https://cdn.jsdelivr.net/npm/mycdn@3.0.0/static/eospixe/locales/{{lng}}/{{ns}}.json",
-                        addPath: "https://cdn.jsdelivr.net/npm/mycdn@3.0.0/static/eospixe/locales/add/{{lng}}/{{ns}}",
+                        loadPath: "locales/{{lng}}/{{ns}}.json",
+                        addPath: "locales/add/{{lng}}/{{ns}}",
                         allowMultiLoading: !1,
                         parse: JSON.parse,
                         crossDomain: !1,
