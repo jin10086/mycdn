@@ -21839,7 +21839,20 @@
                         className: f()("iconfont icon-trophy", l.a.trophy)
                     }), i.a.createElement("span", {
                         className: l.a.hideOnMobile
-                    }, t("menu.leaderboard"))), i.a.createElement(S, {
+                    }, t("menu.leaderboard"))),
+
+                    i.a.createElement("div", {
+                        className: f()("nav-item", {
+                            selected: o,
+                            first: !0
+                        })
+                    }, i.a.createElement("a", {
+                        className: l.a.hideOnMobile,
+                        href:"/buytoken"
+                        
+                    }, t("menu.buySelltoken"))),
+
+                     i.a.createElement(S, {
                         getRef: this.getLeaderboardRef,
                         className: l.a.leaderboard,
                         store: this.store,
