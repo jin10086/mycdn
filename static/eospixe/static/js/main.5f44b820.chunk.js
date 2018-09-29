@@ -1923,11 +1923,11 @@
     }, function (e, t, n) {
         "use strict";
         t.a = {
-            EOS_CONTRACT_NAME: "helloboy1235",
+            EOS_CONTRACT_NAME: "pixelmaster2",
             EOS_NETWORK_PROTOCOL: "https",
-            EOS_NETWORK_HOST: "api-kylin.eosasia.one",
+            EOS_NETWORK_HOST: "proxy.eosnode.tools",
             EOS_NETWORK_PORT: Number("443"),
-            EOS_NETWORK_CHAINID: "5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191",
+            EOS_NETWORK_CHAINID: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
             EOS_CORE_SYMBOL: "EOS",
             CANVAS_SIZE: Number("1000"),
             CANVAS_MAX_SCALE: Number("80"),
