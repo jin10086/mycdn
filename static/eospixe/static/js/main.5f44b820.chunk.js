@@ -1941,7 +1941,7 @@
             REFERRER_PERCENTAGE: Number("10"),
             DEV_TEAM_PERCENTAGE: Number("20"),
             RAM_PAYMENT_PERCENTAGE: Number("7"),
-            WITHDRAW_PIXELS_THRESHOLD: Number("150000"),
+            WITHDRAW_PIXELS_THRESHOLD: Number("10000"),
             PIXELS_PER_ACTION: Number("16"),
             PIXELS_PER_TRANSACTION: Number("32"),
             PIXELS_PER_ROW: Number("25"),
