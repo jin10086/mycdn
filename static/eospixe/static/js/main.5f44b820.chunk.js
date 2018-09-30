@@ -1932,13 +1932,13 @@
             CANVAS_SIZE: Number("1000"),
             CANVAS_MAX_SCALE: Number("80"),
             CANVAS_SCALE_FACTOR: Number("1.1"),
-            DEFAULT_PRICE: Number("0.05"),
+            DEFAULT_PRICE: Number("0.01"),
             PRICE_MULTIPLIER: Number("1.35"),
             PIXEL_PRICE_GROWTH_PERCENTAGE: Number("35"),
             FEE_PERCENTAGE: Number("25"),
-            PATRON_BONUS_PERCENTAGE: Number("40"),
-            POT_PERCENTAGE: Number("25"),
-            REFERRER_PERCENTAGE: Number("8"),
+            PATRON_BONUS_PERCENTAGE: Number("70"),
+            POT_PERCENTAGE: Number("20"),
+            REFERRER_PERCENTAGE: Number("10"),
             DEV_TEAM_PERCENTAGE: Number("20"),
             RAM_PAYMENT_PERCENTAGE: Number("7"),
             WITHDRAW_PIXELS_THRESHOLD: Number("150000"),
@@ -21847,9 +21847,9 @@
                             first: !0
                         })
                     }, i.a.createElement("a", {
-                        className: l.a.hideOnMobile,
-                        href:"/buytoken"
-                        
+                        className: "link",
+                        href:"/buytoken",
+                        target: "_blank"
                     }, t("menu.buySelltoken"))),
 
                      i.a.createElement(S, {
@@ -21889,8 +21889,10 @@
                         className: f()("nav-item")
                     }, i.a.createElement("i", {
                         className: f()("iconfont icon-questioncircle", l.a.faqIcon)
-                    }), i.a.createElement("span", {
-                        className: l.a.hideOnMobile
+                    }), i.a.createElement("a", {
+                        className: "link",
+                        href:"https://docs.google.com/document/d/1w6-M4amc_tKUgQPTiLAXo9uiYEaaMH2zwgqak4bDnJ0/edit#heading=h.rr9q2y705uet",
+                        target: "_blank",
                     }, t("menu.faq"))), i.a.createElement(B, {
                         contentRef: this.faqRef,
                         className: l.a.faq,
