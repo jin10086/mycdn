@@ -21885,7 +21885,6 @@
                     }), t("title")), i.a.createElement("div", {
                         className: "right"
                     }, i.a.createElement(i.a.Fragment, null, i.a.createElement("div", {
-                        onClick: this.handleShowFAQ,
                         className: f()("nav-item")
                     }, i.a.createElement("i", {
                         className: f()("iconfont icon-questioncircle", l.a.faqIcon)
