@@ -1945,7 +1945,7 @@
             PIXELS_PER_ACTION: Number("16"),
             PIXELS_PER_TRANSACTION: Number("32"),
             PIXELS_PER_ROW: Number("25"),
-            CACHED_PIXELS_API: "https://cache.togetthere.cn/chain/get_table_rows",
+            CACHED_PIXELS_API: "https://togetthere.cn/chain/get_table_rows",
             PRECISION_BASE: Number("1e16"),
             VERSION: "0.1.5"
         }
