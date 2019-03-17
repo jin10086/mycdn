@@ -13641,7 +13641,7 @@
                                             case 2:
                                                 (r = e.sent).success ? (u.a.success(i["lpd-agreement-success"] || "success", 0), Object(v.b)("agreement_success", {
                                                     email: a.email
-                                                }), "40" === t.projectStatus ? location.reload() : n.setState({
+                                                }), "20" === t.projectStatus ? location.reload() : n.setState({
                                                     agreeStatues: !1
                                                 })) : (Object(v.b)("agreement_error", {
                                                     email: a.email
@@ -13753,7 +13753,7 @@
                             className: "login"
                         }, h.a.createElement(_.a, {
                             type: "wenhao"
-                        }), i["lpd-project-login"]))), a && ("20" === n.projectStatus || "40" === n.projectStatus) && s && 2 !== s.agreementStatus ? h.a.createElement("tr", null, h.a.createElement("td", null, h.a.createElement("img", {
+                        }), i["lpd-project-login"]))), a && ("20" === n.projectStatus || "20" === n.projectStatus) && s && 2 !== s.agreementStatus ? h.a.createElement("tr", null, h.a.createElement("td", null, h.a.createElement("img", {
                             src: "/static/images/agreement.png",
                             alt: ""
                         }), i["lpd-agreement"]), h.a.createElement("td", null, a ? s && !s.userLimitAreaStatus ? null : s && !s.kycStatus ? h.a.createElement("a", {
@@ -33484,11 +33484,17 @@
                         }, o.a.createElement("img", {
                             src: n.picPath,
                             alt: ""
-                        }), o.a.createElement(V, null, o.a.createElement("h1", null, n.projectName, s ? o.a.createElement(G, null, n.projectStatusName) : null), o.a.createElement(U, null, o.a.createElement("span", null, Object(d.b)("lpd-price", i), "："), k.a.number(n.price) ? o.a.createElement("span", null, "1 ", n.symbol, " = ", n.price.toFixed(8), " ", n.asset) : o.a.createElement("span", null, n.price)), o.a.createElement(U, null, o.a.createElement("span", null, n.timeDesc, "："), s ? o.a.createElement("span", null, Object(D.a)(new Date(n.time))) : o.a.createElement("span", null)), o.a.createElement(U, null, o.a.createElement("span", null, Object(d.b)("lpd-session-supply", i), "："), k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number))), o.a.createElement(J, null, "40" === n.projectStatus && s ? o.a.createElement(S.a, {
+                        }), o.a.createElement(V, null, o.a.createElement("h1", null, n.projectName, s ? o.a.createElement(G, null, n.projectStatusName) : null), o.a.createElement(U, null, o.a.createElement("span", null, Object(d.b)("lpd-price", i), "："), k.a.number(n.price) ? o.a.createElement("span", null, "1 ", n.symbol, " = ", n.price.toFixed(8), " ", n.asset) : o.a.createElement("span", null, n.price)), o.a.createElement(U, null, o.a.createElement("span", null, n.timeDesc, "："), s ? o.a.createElement("span", null, Object(D.a)(new Date(n.time))) : o.a.createElement("span", null)), o.a.createElement(U, null, o.a.createElement("span", null, Object(d.b)("lpd-session-supply", i), "："), k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number))), o.a.createElement(J, null, "20" === n.projectStatus && s ? o.a.createElement(S.a, {
                             detail: n
                         }) : null, o.a.createElement($, {
-                            saling: "40" === n.projectStatus
-                        }, o.a.createElement("span", null, i["lpd-ammount"] || "Amount", ":"), k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number)), "20" === n.projectStatus ? o.a.createElement(X, null, i["lpd-StartsIn"] || "Starts In", ": ", o.a.createElement("span", null, f), i["lpd-d"] || "d", " ", o.a.createElement("span", null, m), i["lpd-h"] || "h", " ", o.a.createElement("span", null, p), i["lpd-m"] || "m", " ", o.a.createElement("span", null, _), i["lpd-s"] || "s") : null, a ? "40" !== n.projectStatus ? o.a.createElement(q, {
+                            saling: "20" === n.projectStatus
+                        }, o.a.createElement("span", null, i["lpd-ammount"] || "Amount", ":"), 
+                        k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number)), 
+                        "20" === n.projectStatus ? o.a.createElement(X, null, i["lpd-StartsIn"] || "Starts In", ": ", 
+                        o.a.createElement("span", null, f), i["lpd-d"] || "d", " ",
+                        o.a.createElement("span", null, m), i["lpd-h"] || "h", " ", 
+                        o.a.createElement("span", null, p), i["lpd-m"] || "m", " ", 
+                        o.a.createElement("span", null, _), i["lpd-s"] || "s") : null, a ? "20" !== n.projectStatus ? o.a.createElement(q, {
                             disabled: !0
                         }, Object(d.b)("lpd-buy-now", i)) : !r || 2 !== r.agreementStatus && 1 !== r.agreementStatus || "false" !== r.userLimitAreaStatus ? o.a.createElement(b.a, {
                             placement: "bottom",
