@@ -33496,17 +33496,29 @@
                         o.a.createElement("span", null, p), i["lpd-m"] || "m", " ", 
                         o.a.createElement("span", null, _), i["lpd-s"] || "s") : null, a ? "20" !== n.projectStatus ? o.a.createElement(q, {
                             disabled: !0
-                        }, Object(d.b)("lpd-buy-now", i)) : !r || 2 !== r.agreementStatus && 1 !== r.agreementStatus || "false" !== r.userLimitAreaStatus ? o.a.createElement(b.a, {
+                        }, Object(d.b)("lpd-buy-now", i)) 
+                        
+                        :0 ? 
+                        
+                        o.a.createElement(b.a, {
                             placement: "bottom",
                             trigger: ["click", "hover"],
                             overlay: o.a.createElement("span", null, i["lpd-prompt"])
                         }, o.a.createElement(q, {
                             disabled: !0
-                        }, Object(d.b)("lpd-buy-now", i))) : o.a.createElement(q, {
+                        }, Object(d.b)("lpd-buy-now", i)))
+
+
+                        : o.a.createElement(q, {
                             onClick: e._handleBuy
-                        }, Object(d.b)("lpd-buy-now", i)) : o.a.createElement(Z, {
+                        }, Object(d.b)("lpd-buy-now", i)) 
+                        
+                        
+                        : o.a.createElement(Z, {
                             href: this.state.loginUrl
-                        }, Object(d.b)("lpd-login-now", i))), "20" === n.projectStatus ? null : o.a.createElement(ee, null, i["lpd-contributors"] || "contributors: ", o.a.createElement("span", null, " ", n.purchasedCount)), o.a.createElement(Q, null, o.a.createElement(K, null, i["lpd-project-community"], "："), o.a.createElement("ul", null, o.a.createElement("li", null, o.a.createElement("a", {
+                        }, Object(d.b)("lpd-login-now", i))
+
+                        ), "20" === n.projectStatus ? null : o.a.createElement(ee, null, i["lpd-contributors"] || "contributors: ", o.a.createElement("span", null, " ", n.purchasedCount)), o.a.createElement(Q, null, o.a.createElement(K, null, i["lpd-project-community"], "："), o.a.createElement("ul", null, o.a.createElement("li", null, o.a.createElement("a", {
                             href: M.tg,
                             target: "_blank",
                             onClick: function () {
