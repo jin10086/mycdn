@@ -33391,6 +33391,7 @@
                     }, n._handleBuy = function () {
                         var e = n.props,
                             t = (e.detail, e.i18n, e.userDetail.email);
+                            console.log(t);
                         Object(O.b)("detail_buy_click", {
                             email: t
                         }), n._openTime = Date.now(), n.setState({
