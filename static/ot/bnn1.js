@@ -33511,7 +33511,8 @@
 
 
                         : o.a.createElement(q, {
-                            onClick: e._handleBuy
+                            onClick: e._handleBuy,
+                            "id":"wtf",
                         }, Object(d.b)("lpd-buy-now", i)) 
                         
                         
