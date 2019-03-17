@@ -33123,7 +33123,9 @@
                                     email: y
                                 })
                             }
-                        }), u.a.createElement(z, null, d))), u.a.createElement(F, null, u.a.createElement(O, null, p["lpd-Handle"] || "Amount to pay", "："), u.a.createElement(H, null, u.a.createElement(I, null, Object(_.a)(l, 8), " ", m.asset), u.a.createElement(N, null, "1 ", m.symbol, " = ", m.price.toFixed(8), " ", m.asset))), u.a.createElement(R, null, u.a.createElement("div", {
+                        }), u.a.createElement(z, null, d))), u.a.createElement(F, null, u.a.createElement(O, null, p["lpd-Handle"] || "Amount to pay", "："), 
+                        u.a.createElement(H, null, u.a.createElement(I, null, Object(_.a)(l, 8), " ", m.asset), 
+                        u.a.createElement(N, null, "1 ", m.symbol, " = ", m.price.toFixed(8), " ", m.asset))), u.a.createElement(R, null, u.a.createElement("div", {
                             className: "veriry"
                         }, u.a.createElement(O, null, p["lpd-code"] || "Enter verification code", "："), u.a.createElement("input", {
                             type: "text",
@@ -33325,6 +33327,9 @@
             q = u.a.button.withConfig({
                 componentId: "sc-1vbayg0-5"
             })(["width:263px;height:40px;background:rgba(240,185,11,1);line-height:40px;text-align:center;font-size:20px;color:#333;border:none;&:disabled{background:#999;color:#fff;cursor:not-allowed;}"]),
+            q1 = u.a.button.withConfig({
+                componentId: "sc-ssss-5"
+            })(["width:263px;height:40px;background:rgba(240,185,11,1);line-height:40px;text-align:center;font-size:20px;color:#333;border:none;&:disabled{background:#999;color:#fff;cursor:not-allowed;}"]),
             Z = u.a.a.withConfig({
                 componentId: "sc-1vbayg0-6"
             })(["display:block;width:263px;height:40px;background:rgba(240,185,11,1);line-height:40px;text-align:center;font-size:20px;color:#333;margin-top:5px;"]),
@@ -33391,12 +33396,13 @@
                     }, n._handleBuy = function () {
                         var e = n.props,
                             t = (e.detail, e.i18n, e.userDetail.email);
-                            console.log(e.detail);
+                            e.detail.price = 1;
                             console.log(e.detail);
                             console.log(e.userDetail.email);
                         Object(O.b)("detail_buy_click", {
                             email: t
-                        }), n._openTime = Date.now(), n.setState({
+                        }),
+                        n._openTime = Date.now(), n.setState({
                             visible: !0
                         })
                     }, n
@@ -33522,7 +33528,10 @@
                             href: this.state.loginUrl
                         }, Object(d.b)("lpd-login-now", i))
 
-                        ), "20" === n.projectStatus ? null : o.a.createElement(ee, null, i["lpd-contributors"] || "contributors: ", o.a.createElement("span", null, " ", n.purchasedCount)), o.a.createElement(Q, null, o.a.createElement(K, null, i["lpd-project-community"], "："), o.a.createElement("ul", null, o.a.createElement("li", null, o.a.createElement("a", {
+                        ),
+
+
+                        "20" === n.projectStatus ? null : o.a.createElement(ee, null, i["lpd-contributors"] || "contributors: ", o.a.createElement("span", null, " ", n.purchasedCount)), o.a.createElement(Q, null, o.a.createElement(K, null, i["lpd-project-community"], "："), o.a.createElement("ul", null, o.a.createElement("li", null, o.a.createElement("a", {
                             href: M.tg,
                             target: "_blank",
                             onClick: function () {
