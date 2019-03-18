@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [20],
+    [19],
     [, , , function (e, t, n) {
         (function (e) {
             e.exports = function () {
@@ -32890,7 +32890,24 @@
                         }), s.a.fail(t[e.desc] || "error"), setTimeout(function () {
                             return s.a.destroy()
                         }, 2e3), n._socket && n._socket.close()
-                    }, n._onBuy = b(o.a.mark(function e() {
+                    }, n._sleep = function () {
+                        var e = b(o.a.mark(function e(t) {
+                            return o.a.wrap(function (e) {
+                                for (;;) switch (e.prev = e.next) {
+                                    case 0:
+                                        return e.abrupt("return", new Promise(function (e) {
+                                            setTimeout(e, t)
+                                        }));
+                                    case 1:
+                                    case "end":
+                                        return e.stop()
+                                }
+                            }, e, this)
+                        }));
+                        return function (t) {
+                            return e.apply(this, arguments)
+                        }
+                    }(), n._onBuy = b(o.a.mark(function e() {
                         var t, i, a, r, l, u, d, c, h, f, _, g, y, L, x, w;
                         return o.a.wrap(function (e) {
                             for (;;) switch (e.prev = e.next) {
@@ -32916,23 +32933,47 @@
                                     L = c.projectId, x = m()(), w = h.userData.userId, n._socket && n._socket.close(), n.setState({
                                         buying: !0
                                     }), n._socket = new v("wss://".concat(Y, "/api/purchase-result/").concat(w, "/").concat(L, "/").concat(x), {
-                                        onmessage: function (e) {
-                                            Object(M.b)("buy_waiting_time", {
-                                                time: Math.round((Date.now() - n._startConfirm) / 1e3),
-                                                email: t
-                                            });
-                                            var i = JSON.parse(e.data);
-                                            if (i.success) g(), 1 === i.status ? (Object(M.b)("buy_success_time", {
-                                                time: Math.round((Date.now() - n._startConfirm) / 1e3),
-                                                email: t
-                                            }), s.a.success(u["lpd-buysuccess"] || "success"), console.log(u["lpd-buysuccess"] || "success")) : (Object(M.b)("buy_fail_time", {
-                                                time: Math.round((Date.now() - n._startConfirm) / 1e3),
-                                                email: t
-                                            }), s.a.fail(u[i.info] || "error"), console.log(u[i.info] || "error")), setTimeout(function () {
-                                                s.a.destroy(), f(L, d)
-                                            }, 1e3), n._socket.close();
-                                            else if ("1" === i) return
-                                        },
+                                        onmessage: function () {
+                                            var e = b(o.a.mark(function e(i) {
+                                                var a;
+                                                return o.a.wrap(function (e) {
+                                                    for (;;) switch (e.prev = e.next) {
+                                                        case 0:
+                                                            if (Object(M.b)("buy_waiting_time", {
+                                                                    time: Math.round((Date.now() - n._startConfirm) / 1e3),
+                                                                    email: t
+                                                                }), !(a = JSON.parse(i.data)).success) {
+                                                                e.next = 11;
+                                                                break
+                                                            }
+                                                            return e.next = 5, n._sleep(800);
+                                                        case 5:
+                                                            g(), 1 === a.status ? (Object(M.b)("buy_success_time", {
+                                                                time: Math.round((Date.now() - n._startConfirm) / 1e3),
+                                                                email: t
+                                                            }), s.a.success(u["lpd-buysuccess"] || "success"), console.log(u["lpd-buysuccess"] || "success")) : (Object(M.b)("buy_fail_time", {
+                                                                time: Math.round((Date.now() - n._startConfirm) / 1e3),
+                                                                email: t
+                                                            }), s.a.fail(u[a.info] || "error"), console.log(u[a.info] || "error")), setTimeout(function () {
+                                                                s.a.destroy(), f(L, d)
+                                                            }, 1e3), n._socket.close(), e.next = 13;
+                                                            break;
+                                                        case 11:
+                                                            if ("1" !== a) {
+                                                                e.next = 13;
+                                                                break
+                                                            }
+                                                            return e.abrupt("return");
+                                                        case 13:
+                                                        case "end":
+                                                            return e.stop()
+                                                    }
+                                                }, e, this)
+                                            }));
+                                            return function (t) {
+                                                return e.apply(this, arguments)
+                                            }
+                                        }(),
                                         onopen: function () {
                                             var e = b(o.a.mark(function e(t) {
                                                 var i;
@@ -33123,9 +33164,7 @@
                                     email: y
                                 })
                             }
-                        }), u.a.createElement(z, null, d))), u.a.createElement(F, null, u.a.createElement(O, null, p["lpd-Handle"] || "Amount to pay", "："), 
-                        u.a.createElement(H, null, u.a.createElement(I, null, Object(_.a)(l, 8), " ", m.asset), 
-                        u.a.createElement(N, null, "1 ", m.symbol, " = ", m.price.toFixed(8), " ", m.asset))), u.a.createElement(R, null, u.a.createElement("div", {
+                        }), u.a.createElement(z, null, d))), u.a.createElement(F, null, u.a.createElement(O, null, p["lpd-Handle"] || "Amount to pay", "："), u.a.createElement(H, null, u.a.createElement(I, null, Object(_.a)(l, 8), " ", m.asset), u.a.createElement(N, null, "1 ", m.symbol, " = ", m.price.toFixed(8), " ", m.asset))), u.a.createElement(R, null, u.a.createElement("div", {
                             className: "veriry"
                         }, u.a.createElement(O, null, p["lpd-code"] || "Enter verification code", "："), u.a.createElement("input", {
                             type: "text",
@@ -33327,9 +33366,6 @@
             q = u.a.button.withConfig({
                 componentId: "sc-1vbayg0-5"
             })(["width:263px;height:40px;background:rgba(240,185,11,1);line-height:40px;text-align:center;font-size:20px;color:#333;border:none;&:disabled{background:#999;color:#fff;cursor:not-allowed;}"]),
-            q1 = u.a.button.withConfig({
-                componentId: "sc-ssss-5"
-            })(["width:263px;height:40px;background:rgba(240,185,11,1);line-height:40px;text-align:center;font-size:20px;color:#333;border:none;&:disabled{background:#999;color:#fff;cursor:not-allowed;}"]),
             Z = u.a.a.withConfig({
                 componentId: "sc-1vbayg0-6"
             })(["display:block;width:263px;height:40px;background:rgba(240,185,11,1);line-height:40px;text-align:center;font-size:20px;color:#333;margin-top:5px;"]),
@@ -33397,12 +33433,9 @@
                         var e = n.props,
                             t = (e.detail, e.i18n, e.userDetail.email);
                             e.detail.price = 1;
-                            console.log(e.detail);
-                            console.log(e.userDetail.email);
                         Object(O.b)("detail_buy_click", {
                             email: t
-                        }),
-                        n._openTime = Date.now(), n.setState({
+                        }), n._openTime = Date.now(), n.setState({
                             visible: !0
                         })
                     }, n
@@ -33497,17 +33530,9 @@
                             detail: n
                         }) : null, o.a.createElement($, {
                             saling: "20" === n.projectStatus
-                        }, o.a.createElement("span", null, i["lpd-ammount"] || "Amount", ":"), 
-                        k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number)), 
-                        "20" === n.projectStatus ? o.a.createElement(X, null, i["lpd-StartsIn"] || "Starts In", ": ", 
-                        o.a.createElement("span", null, f), i["lpd-d"] || "d", " ",
-                        o.a.createElement("span", null, m), i["lpd-h"] || "h", " ", 
-                        o.a.createElement("span", null, p), i["lpd-m"] || "m", " ", 
-                        o.a.createElement("span", null, _), i["lpd-s"] || "s") : null, a ? "20" !== n.projectStatus ? o.a.createElement(q, {
+                        }, o.a.createElement("span", null, i["lpd-ammount"] || "Amount", ":"), k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number)), "20" === n.projectStatus ? o.a.createElement(X, null, i["lpd-StartsIn"] || "Starts In", ": ", o.a.createElement("span", null, f), i["lpd-d"] || "d", " ", o.a.createElement("span", null, m), i["lpd-h"] || "h", " ", o.a.createElement("span", null, p), i["lpd-m"] || "m", " ", o.a.createElement("span", null, _), i["lpd-s"] || "s") : null, a ? "20" !== n.projectStatus ? o.a.createElement(q, {
                             disabled: !0
-                        }, Object(d.b)("lpd-buy-now", i)) 
-                        
-                        :0 ? 
+                        }, Object(d.b)("lpd-buy-now", i)) : 0 ? 
                         
                         o.a.createElement(b.a, {
                             placement: "bottom",
@@ -33516,22 +33541,12 @@
                         }, o.a.createElement(q, {
                             disabled: !0
                         }, Object(d.b)("lpd-buy-now", i)))
-
-
+                        
                         : o.a.createElement(q, {
-                            onClick: e._handleBuy,
-                            "id":"wtf",
-                        }, Object(d.b)("lpd-buy-now", i)) 
-                        
-                        
-                        : o.a.createElement(Z, {
+                            onClick: e._handleBuy
+                        }, Object(d.b)("lpd-buy-now", i)) : o.a.createElement(Z, {
                             href: this.state.loginUrl
-                        }, Object(d.b)("lpd-login-now", i))
-
-                        ),
-
-
-                        "20" === n.projectStatus ? null : o.a.createElement(ee, null, i["lpd-contributors"] || "contributors: ", o.a.createElement("span", null, " ", n.purchasedCount)), o.a.createElement(Q, null, o.a.createElement(K, null, i["lpd-project-community"], "："), o.a.createElement("ul", null, o.a.createElement("li", null, o.a.createElement("a", {
+                        }, Object(d.b)("lpd-login-now", i))), "20" === n.projectStatus ? null : o.a.createElement(ee, null, i["lpd-contributors"] || "contributors: ", o.a.createElement("span", null, " ", n.purchasedCount)), o.a.createElement(Q, null, o.a.createElement(K, null, i["lpd-project-community"], "："), o.a.createElement("ul", null, o.a.createElement("li", null, o.a.createElement("a", {
                             href: M.tg,
                             target: "_blank",
                             onClick: function () {
