@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [19],
+    [20],
     [, , , function (e, t, n) {
         (function (e) {
             e.exports = function () {
@@ -33432,7 +33432,6 @@
                     }, n._handleBuy = function () {
                         var e = n.props,
                             t = (e.detail, e.i18n, e.userDetail.email);
-                            e.detail.price = 1;
                         Object(O.b)("detail_buy_click", {
                             email: t
                         }), n._openTime = Date.now(), n.setState({
@@ -33532,17 +33531,13 @@
                             saling: "20" === n.projectStatus
                         }, o.a.createElement("span", null, i["lpd-ammount"] || "Amount", ":"), k.a.number(n.number) ? o.a.createElement("span", null, Object(C.a)(n.number), " ", n.symbol) : o.a.createElement("span", null, n.number)), "20" === n.projectStatus ? o.a.createElement(X, null, i["lpd-StartsIn"] || "Starts In", ": ", o.a.createElement("span", null, f), i["lpd-d"] || "d", " ", o.a.createElement("span", null, m), i["lpd-h"] || "h", " ", o.a.createElement("span", null, p), i["lpd-m"] || "m", " ", o.a.createElement("span", null, _), i["lpd-s"] || "s") : null, a ? "20" !== n.projectStatus ? o.a.createElement(q, {
                             disabled: !0
-                        }, Object(d.b)("lpd-buy-now", i)) : 0 ? 
-                        
-                        o.a.createElement(b.a, {
+                        }, Object(d.b)("lpd-buy-now", i)) : 0 ? o.a.createElement(b.a, {
                             placement: "bottom",
                             trigger: ["click", "hover"],
                             overlay: o.a.createElement("span", null, i["lpd-prompt"])
                         }, o.a.createElement(q, {
                             disabled: !0
-                        }, Object(d.b)("lpd-buy-now", i)))
-                        
-                        : o.a.createElement(q, {
+                        }, Object(d.b)("lpd-buy-now", i))) : o.a.createElement(q, {
                             onClick: e._handleBuy
                         }, Object(d.b)("lpd-buy-now", i)) : o.a.createElement(Z, {
                             href: this.state.loginUrl
