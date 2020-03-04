@@ -17,3 +17,7 @@
 ```
 
 放到你网站上，具体请看[contribute-performance-data](https://github.com/jsdelivr/jsdelivr#contribute-performance-data)
+
+## 
+
+修改package.json里面的版本号,然后`npm publish .`
